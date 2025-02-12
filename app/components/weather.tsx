@@ -24,7 +24,7 @@ export function Weather({
     >
       <div className="flex items-center justify-between">
         <div className="text-lg font-medium">{location}</div>
-        <div className="text-2xl font-bold">{temperature}°C</div>
+        <div className="text-2xl font-bold">{Math.round(temperature - 273.15)}°C</div>
       </div>
       <div className="mt-2 text-sm opacity-75">{weather}</div>
     </div>

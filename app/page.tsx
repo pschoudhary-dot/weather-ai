@@ -7,7 +7,8 @@ export default function Home() {
   const { messages, input, handleInputChange, handleSubmit } = useChat();
 
   return (
-    <div className="flex flex-col h-screen max-w-6xl w-full mx-auto">
+    <div className="flex flex-col h-screen max-w-6xl w-full mx-auto">        
+    <h1 className="text-3xl text-center mt-10 font-bold tracking-tight text-white/90">Weather AI Chatbot</h1>
       <div className="flex-1 overflow-y-auto">
         {messages.map((message) => (
           <Message key={message.id} message={message} />
