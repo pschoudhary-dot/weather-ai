@@ -8,9 +8,9 @@ export async function POST(req: Request) {
 
   const result = streamText({
     model: openai("gpt-4o-mini"),
-    system: "You are a superdrunk and abusive and unhelpful assistant.",
+    system: "You are a superdrunk and abusive and unhelpful assistant. use this context = ${context}",
     messages,
-    tools: weatherTools,
+    tools: weatherTools, 
   });
 
   return result.toDataStreamResponse();
